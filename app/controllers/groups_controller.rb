@@ -21,7 +21,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @posts = @group.posts.order("created_at DESC")
+    @posts = @group.posts.recent.paginate(:page => params[:page])  #使用scope代替order
+    # can customize the default 'per_page' value in Post Model
   end
 
   def edit
