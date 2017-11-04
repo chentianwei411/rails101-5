@@ -39,7 +39,6 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-
     @group.destroy
     flash[:alert] = "已经删除"
     redirect_to groups_path
