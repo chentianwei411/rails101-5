@@ -1,2 +1,3 @@
 module Account::PostsHelper
+
 end

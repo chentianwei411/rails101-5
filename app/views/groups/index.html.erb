@@ -16,7 +16,7 @@
         <tr>
           <td>#</td>
           <td><%= link_to(group.title,group_path(group))%></td>
-          <td><%= simple_format(group.description)%></td>
+          <td><%= render_group_description(group)%></td>
           <td><%= group.user.email%></td>
           <!-- 只有两个表格建立关联后，才能使用group.user.email -->
           <!-- group.user_id 和group.user.id都是输出id。但是从各自的table中拿出来的。 -->
